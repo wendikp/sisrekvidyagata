@@ -1,0 +1,44 @@
+%%scala
+//import java.text.SimpleDateFormat
+//import java.util.{Calendar, Date}
+// Membuat class dan fungsi
+class Opt {
+  // deklarasi method add secara umum
+  def add(a: Int, b: Int) = a + b
+  // nama method sama, tetapi dengan men-set tipe return-nya
+  //def add(a: Int, b: Int): Int = a + b
+  // men-define method body dalam suatu block dalam kurung kurawal
+  /* def add(a: Int, b: Int): Int = {
+  a + b
+  } */
+  
+  def tambahdanKali(a: Int, b: Int) = {
+    val hasil1: Int = a + b; // val --> Immutable atau Read only
+    val hasil2: Int = a * b; // val --> Immutable atau Read only
+    var Keterangan: String=""; // var --> Mutable atau read-write
+    if(hasil1 == hasil2){
+      Keterangan = "hasil1 = hasil2";
+    } else{
+      Keterangan = "hasil1 != hasil2";
+    }
+    (Keterangan, hasil1, hasil2) // return langsung 3 nilai
+  }
+}
+
+object ScalaDasar {
+  def main(args: Array[String]) {
+    val c = new Opt()
+      print("Hasil 1+8 =")
+      print(c.add(1,8))
+      print("\n")
+      print("Hasil c.tambahdanKali(2,8)._1 = ")
+      print(c.tambahdanKali(2,8)._1)
+      print("\n")
+      print("Hasil c.tambahdanKali(2,8)._2 = ")
+      print(c.tambahdanKali(2,8)._2)
+      print("\n")
+      print("Hasil c.tambahdanKali(2,8)._3 = ")
+      print(c.tambahdanKali(2,8)._3)
+  }
+}
+ScalaDasar.main(Array())
