@@ -43,15 +43,15 @@ Halaman Kriteria Peminatan
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div class="box box-success">
+        <div class="box box-primary">
           <div class="box-header with-border">
             <h3 class="box-title">Daftar Kriteria Peminatan</h3>
             <div class="pull-right">
               <div class="btn-group">
-                <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-tambah">
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-tambah">
                   Tambah Kriteria
                 </button>
-                <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-edit">
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-edit">
                   Edit
                 </button>
               </div>
@@ -59,7 +59,7 @@ Halaman Kriteria Peminatan
           </div><!-- /.box-header -->
 
           <!-- Form modal -->
-          <div class="modal fade" id="modal-tambah">
+          <div class="modal modal-primary fade" id="modal-tambah">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -108,8 +108,8 @@ Halaman Kriteria Peminatan
                 </form>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
-                <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Tutup</button>
+                <button type="submit" value="submit" class="btn btn-outline">Submit</button>
               </div>
             </div>
             <!-- /.modal-content -->
@@ -119,7 +119,7 @@ Halaman Kriteria Peminatan
         <!-- /.modal -->
 
         <!-- Form modal -->
-        <div class="modal fade" id="modal-edit">
+        <div class="modal modal-primary fade" id="modal-edit">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -151,14 +151,14 @@ Halaman Kriteria Peminatan
                         <input type="hidden" name="id[]" value="{{ $data->id }}">
                         <input type="text" class="form-control" name="kriteria[]" style="width: 220px;" value="{{ $data->kriteria }}" required="required">
                       </td>
-                      <td>
+                      <td style="border: none;">
                         <select class="form-control" name="kategori[]" required="required">
                           <option value="1">Nilai raport, nilai UN</option>
                           <option value="2">Nilai psikotest</option>
                           <option value="3">Minat/saran</option>
                         </select>
                       </td>
-                      <td>
+                      <td style="border: none;">
                         <select class="form-control" name="klasifikasi_nilai[]" required="required">
                           <option value="1">Sangat baik, baik, cukup, kurang, sangat kurang</option>
                           <option value="2">Sangat minat, cukup, kurang minat, tidak minat</option>
@@ -172,8 +172,8 @@ Halaman Kriteria Peminatan
                   </table>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
-                  <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+                  <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Tutup</button>
+                  <button type="submit" value="submit" class="btn btn-outline">Submit</button>
                 </div>
               </form>
             </div>
@@ -202,24 +202,24 @@ Halaman Kriteria Peminatan
               <?php $i=1; ?>
               @foreach ($data_kriteria as $data)
               <tr>
-                <td><?php echo ($i++) ?></td>
-                <td>{{ $data->kriteria }}</td>
-                <td>{{ $data->bobot_prioritas_ipa }}</td>
-                <td>{{ $data->bobot_prioritas_ips }}</td>
-                <td>{{ $data->bobot_prioritas_bhs }}</td>
-                <td>
+                <td style="border: none;"><?php echo ($i++) ?></td>
+                <td style="border: none;">{{ $data->kriteria }}</td>
+                <td style="border: none;">{{ $data->bobot_prioritas_ipa }}</td>
+                <td style="border: none;">{{ $data->bobot_prioritas_ips }}</td>
+                <td style="border: none;">{{ $data->bobot_prioritas_bhs }}</td>
+                <td style="border: none;">
                   @if($data->kategori == 1) Nilai raport, nilai UN
                   @elseif($data->kategori == 2) Nilai Psikotest
                   @else Minat/saran
                   @endif
                 </td>
-                <td>
+                <td style="border: none;">
                   @if($data->klasifikasi_nilai == 1) Sangat baik - sangat Kurang
                   @else Sangat minat - tidak minat
                   @endif
                 </td>
-                <td>{{ $data->day }}-{{ $data->month }}-{{ $data->year }}</td>
-                <td width="100">
+                <td style="border: none;">{{ $data->day }}-{{ $data->month }}-{{ $data->year }}</td>
+                <td style="border: none;" width="100">
                   <div class="btn-group">
                     <a href="{{ url('/daftar_kriteria/kriteria/hapus/'.$data->id) }}" class="btn btn-default" data-toggle="tooltip" title="Hapus Kriteria"><i class="fa fa-trash"></i></a>
                   </div>

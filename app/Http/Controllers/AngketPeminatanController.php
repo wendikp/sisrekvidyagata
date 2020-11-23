@@ -284,6 +284,16 @@ public function daftarRekomendasiPeminatan($angkatan){
         )
     ->join('nilai_peminatan', 'users.id', '=', 'nilai_peminatan.id_user')
     ->join('rekomendasi_peminatan', 'users.id', '=', 'rekomendasi_peminatan.id_user')
+    ->groupBy(
+        'users.no_induk',
+        'users.name',
+        'nilai_peminatan.nilai_ipa',
+        'nilai_peminatan.nilai_ips',
+        'nilai_peminatan.nilai_bahasa',
+        'rekomendasi_peminatan.rekomendasi_1',
+        'rekomendasi_peminatan.rekomendasi_2',
+        'rekomendasi_peminatan.rekomendasi_3'
+        )
     ->where('users.angkatan', $angkatan)
     ->get();
 

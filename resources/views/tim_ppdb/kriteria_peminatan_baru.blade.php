@@ -22,7 +22,7 @@ Halaman Tambah Kriteria Peminatan
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div class="box box-success">
+        <div class="box box-primary">
           <div class="box-header with-border">
             <h3 class="box-title">Form. Membuat Kriteria Peminatan</h3>
           </div><!-- /.box-header -->

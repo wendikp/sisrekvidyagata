@@ -16,24 +16,13 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="{{ asset('AdminLTE/bower_components/Ionicons/css/ionicons.min.css') }}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/AdminLTE.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/AdminLTE.css') }}">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
   folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/skins/_all-skins.min.css') }}">
   <!-- CSS lainnya -->
   @yield('style')
   
-
-  <!-- Date Picker -->
-  <!-- <link rel="stylesheet" href="{{ asset('AdminLTE/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}"> -->
-  <!-- Daterange picker -->
-  <!-- <link rel="stylesheet" href="{{ asset('AdminLTE/bower_components/bootstrap-daterangepicker/daterangepicker.css') }}"> -->
-  <!-- jvectormap -->
-  <!-- <link rel="stylesheet" href="{{ asset('AdminLTE/bower_components/jvectormap/jquery-jvectormap.css') }}"> -->
-  
-  <!-- Scripts -->
-  <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
-
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -45,13 +34,13 @@
   <link rel="stylesheet"
   href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-green sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
 
     <header class="main-header">
 
       <!-- Logo -->
-      <a href="{{ asset('AdminLTE/index2.html') }}" class="logo">
+      <a href="{{ url('/dashboard-admin') }}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini">SrV</span>
         <!-- logo for regular state and mobile devices -->
@@ -69,28 +58,14 @@
           <ul class="nav navbar-nav">
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                {{ Auth::user()->name }}<span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" style="width: 50px">
-                <!-- Menu Body -->
-                <li class="user-body">
-                  <div class="row">
-                    <!-- <div class="col-xs-4 text-center"> -->
-                    <div class="text-center">
-                      <a href="{{ route('logout') }}" 
-                      onclick="event.preventDefault();
-                      document.getElementById('logout-form').submit();">
-                      {{ __('Logout') }}
-                    </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                      @csrf
-                    </form>
-                  </div>
-                </div>
-                <!-- /.row -->
-              </li>
-            </ul>
+              <a type="button" href="{{ route('logout') }}" 
+              onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">
+              <b>{{ __('Logout') }}</b>
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+            </form>
           </li>
         </ul>
       </div>
@@ -115,7 +90,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MENU UTAMA</li>
-        <li><a href="{{ url('/dashboard-admin') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="{{ url('/dashboard-admin') }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-users"></i> <span>Daftar Pengguna</span>

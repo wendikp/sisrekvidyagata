@@ -27,7 +27,7 @@ Halaman Edit Admin
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div class="box box-success">
+        <div class="box box-primary">
           <div class="box-header with-border">
             <h3 class="box-title">Form. Edit Admin</h3>
           </div><!-- /.box-header -->
@@ -114,7 +114,7 @@ Halaman Edit Admin
                 </tr>
               </table>
               @endforeach
-              <div class="box-footer">
+              <div class="box-footer text-align-right">
                 <button name="submit" value="submit" type="submit" class="btn btn-primary">Submit</button>
               </div>
             </form>

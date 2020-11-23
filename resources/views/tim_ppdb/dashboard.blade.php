@@ -16,7 +16,6 @@ Dashboard
   <section class="content-header">
     <h1>
       Dashboard
-      <small>Version 2.0</small>
     </h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard active"></i> Dashboard</a></li>
@@ -91,7 +90,7 @@ Dashboard
 
         <div class="col-md-12">
           <!-- BAR CHART -->
-          <div class="box box-success">
+          <div class="box box-primary">
             <div class="box-body">
               <div id="barChart"></div>
             </div>
@@ -105,7 +104,7 @@ Dashboard
 
       <div class="col-md-3">
         <!-- About Me Box -->
-        <div class="box box-success">
+        <div class="box box-primary">
           <div class="box-header with-border">
             <img class="profile-user-img img-responsive img-circle" src="{{ asset('AdminLTE/dist/img/user.jpg') }}" alt="User profile picture">
             @foreach($data_tim as $data)
@@ -137,8 +136,8 @@ Dashboard
           </div>
           <!-- /.box-body -->
           <div class="box-footer">
-            <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-profil">Edit Profil</button>
-            <button type="button" class="btn btn-default btn-sm pull-right" data-toggle="modal" data-target="#modal-password">Ganti Password</button>
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-profil">Edit Profil</button>
+            <button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#modal-password">Ganti Password</button>
           </div>
           <!-- /.box-footer -->
         </div>
@@ -149,13 +148,10 @@ Dashboard
     <!-- /.row -->
 
     <!-- Form modal -->
-    <div class="modal fade" id="modal-profil">
+    <div class="modal modal-primary fade" id="modal-profil">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
             <h4 class="modal-title">Edit Profil</h4>
           </div>
           <div class="modal-body">
@@ -253,8 +249,8 @@ Dashboard
               @endforeach
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
-              <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Tutup</button>
+              <button type="submit" value="submit" class="btn btn-outline">Submit</button>
             </div>
           </form>
         </div>
@@ -265,13 +261,10 @@ Dashboard
     <!-- /.modal -->
 
     <!-- Form modal -->
-    <div class="modal fade" id="modal-password">
+    <div class="modal modal-primary fade" id="modal-password">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
             <h4 class="modal-title">Ganti password</h4>
           </div>
           <div class="modal-body">
@@ -296,8 +289,8 @@ Dashboard
               </table>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
-              <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Tutup</button>
+              <button type="submit" value="submit" class="btn btn-outline">Submit</button>
             </div>
           </form>
         </div>
@@ -306,7 +299,6 @@ Dashboard
       <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
-
   </section>
   <!-- /.content -->
 </div>
@@ -327,6 +319,29 @@ Dashboard
 @section('page-script')
 <!-- page script -->
 <script>
+  //Input mask
+  $('[data-mask]').inputmask();
+
+  //Date picker
+  $('#datepicker').datepicker({
+    format: "dd-mm-yyyy",
+    autoclose:true
+  });
+
+  // New Password confirmation
+  window.onload = function () {
+    document.getElementById("pw1").onchange = validatePassword;
+    document.getElementById("pw2").onchange = validatePassword;
+  }
+  function validatePassword(){
+    var pass2=document.getElementById("pw2").value;
+    var pass1=document.getElementById("pw1").value;
+    if(pass1!=pass2)
+      document.getElementById("pw2").setCustomValidity("Passwords Tidak Sama, Coba Lagi");
+    else
+      document.getElementById("pw2").setCustomValidity('');
+  }
+
   Highcharts.chart('barChart', {
     chart: {
         type: 'column'
@@ -371,30 +386,7 @@ Dashboard
         data: {!! json_encode($rekomendasi_siswa_bhs) !!}
 
     }]
-});
-
-  //Input mask
-  $('[data-mask]').inputmask();
-
-  //Date picker
-  $('#datepicker').datepicker({
-    format: "dd-mm-yyyy",
-    autoclose:true
   });
-
-  // New Password confirmation
-  window.onload = function () {
-    document.getElementById("pw1").onchange = validatePassword;
-    document.getElementById("pw2").onchange = validatePassword;
-  }
-  function validatePassword(){
-    var pass2=document.getElementById("pw2").value;
-    var pass1=document.getElementById("pw1").value;
-    if(pass1!=pass2)
-      document.getElementById("pw2").setCustomValidity("Passwords Tidak Sama, Coba Lagi");
-    else
-      document.getElementById("pw2").setCustomValidity('');
-  }
 
 </script>
 @endsection

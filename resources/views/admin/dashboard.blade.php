@@ -11,7 +11,6 @@ Dashboard
   <section class="content-header">
     <h1>
       Dashboard
-      <small>Version 2.0</small>
     </h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard active"></i> Dashboard</a></li>
@@ -42,7 +41,6 @@ Dashboard
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="info-box">
           <span class="info-box-icon bg-yellow"><i class="ion ion-ios-person-outline"></i></span>
-
           <div class="info-box-content">
             <span class="info-box-text">Akun Waka Kurikulum</span>
             <span class="info-box-number">{{ $jml_waka }}</span>
@@ -55,11 +53,9 @@ Dashboard
 
       <!-- fix for small devices only -->
       <div class="clearfix visible-sm-block"></div>
-
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="info-box">
           <span class="info-box-icon bg-blue"><i class="ion ion-ios-person-outline"></i></span>
-
           <div class="info-box-content">
             <span class="info-box-text">Akun Tim PPDB</span>
             <span class="info-box-number">{{ $jml_timppdb }}</span>
@@ -88,7 +84,7 @@ Dashboard
     <div class="row">
       <div class="col-md-9">
         <!-- BAR CHART -->
-        <div class="box box-success">
+        <div class="box box-primary">
           <div class="box-body">
             <div id="barChart"></div>
           </div>
@@ -99,12 +95,11 @@ Dashboard
       <!-- /.col (RIGHT) -->
       <div class="col-md-3">
         <!-- About Me Box -->
-        <div class="box box-success">
+        <div class="box box-primary">
           <div class="box-header with-border">
             <img class="profile-user-img img-responsive img-circle" src="{{ asset('AdminLTE/dist/img/user.jpg') }}" alt="User profile picture">
             @foreach($data_admin as $data)
             <h3 class="profile-username text-center">{{ $data->name }}</h3>
-
             <p class="text-muted text-center">{{ $data->no_induk }}</p>
           </div>
           <!-- /.box-header -->
@@ -112,11 +107,9 @@ Dashboard
             <strong><i class="fa fa-phone margin-r-5"></i> No. Telepon</strong>
             <p class="text-muted">{{ $data->no_telepon }}</p>
             <hr>
-
             <strong><i class="fa fa-envelope margin-r-5"></i> Email</strong>
             <p class="text-muted">{{ $data->email }}</p>
             <hr>
-
             <strong><i class="fa fa-birthday-cake margin-r-5"></i> Tanggal lahir</strong>
             <p class="text-muted">
               <?php
@@ -130,28 +123,26 @@ Dashboard
             @endforeach
           </div>
           <!-- /.box-body -->
-          <div class="box-footer">
-            <button type="button" class="btn btn-default btn-sm pull-right" data-toggle="modal" data-target="#modal-password">Ganti Password</button>
+          <div class="box-footer text-align-center">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-password">Ganti Password</button>
           </div>
           <!-- /.box-footer -->
         </div>
         <!-- /.box -->
       </div>
       <!-- /.col -->
+    </div>
     <!-- /.row -->
 
     <!-- Form modal -->
-    <div class="modal fade" id="modal-password">
+    <div class="modal modal-primary fade" id="modal-password">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
             <h4 class="modal-title">Ganti password</h4>
           </div>
-          <div class="modal-body">
-            <form action="{{ url('/dashboard-admin/gantiPassword') }}" role="form" method="POST">
+          <form action="{{ url('/dashboard-admin/gantiPassword') }}" role="form" method="POST">
+            <div class="modal-body">
               @csrf
               <input type="hidden" name="id_user" value="{{ Auth::user()->id }}">
               <table class="table table-responsive">
@@ -172,8 +163,8 @@ Dashboard
               </table>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
-              <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Tutup</button>
+              <button type="submit" value="submit" class="btn btn-outline">Submit</button>
             </div>
           </form>
         </div>
@@ -182,7 +173,6 @@ Dashboard
       <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
-
   </section>
   <!-- /.content -->
 </div>
@@ -196,49 +186,12 @@ Dashboard
 
 @section('page-script')
 <script type="text/javascript">
-Highcharts.chart('barChart', {
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Jumlah Siswa Baru Setiap Tahun'
-    },
-    xAxis: {
-        categories: {!! json_encode($angkatan) !!},
-        crosshair: true
-    },
-    yAxis: {
-        min: 0,
-        title: {
-            text: 'Jumlah'
-        }
-    },
-    tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.0f}</b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.2,
-            borderWidth: 0
-        }
-    },
-    series: [{
-        name: 'Jumlah Siswa',
-        data: {!! json_encode($jumlah) !!}
-
-    }]
-});
-
-// New Password confirmation
+  // New Password confirmation
   window.onload = function () {
     document.getElementById("pw1").onchange = validatePassword;
     document.getElementById("pw2").onchange = validatePassword;
-  }
+  };
+
   function validatePassword(){
     var pass2=document.getElementById("pw2").value;
     var pass1=document.getElementById("pw1").value;
@@ -246,6 +199,43 @@ Highcharts.chart('barChart', {
       document.getElementById("pw2").setCustomValidity("Passwords Tidak Sama, Coba Lagi");
     else
       document.getElementById("pw2").setCustomValidity('');
-  }
+  };
+
+  Highcharts.chart('barChart', { 
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'Jumlah Siswa Baru Setiap Tahun'
+    },
+    xAxis: {
+      categories: {!! json_encode($angkatan) !!},
+      crosshair: true
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: 'Jumlah'
+      }
+    },
+    tooltip: {
+      headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+      pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+      '<td style="padding:0"><b>{point.y:.0f}</b></td></tr>',
+      footerFormat: '</table>',
+      shared: true,
+      useHTML: true
+    },
+    plotOptions: {
+      column: {
+        pointPadding: 0.2,
+        borderWidth: 0
+      }
+    },
+    series: [{
+      name: 'Jumlah Siswa',
+      data: {!! json_encode($jumlah) !!}
+    }]
+  });
 </script>
 @endsection

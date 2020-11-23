@@ -27,7 +27,7 @@ Halaman Daftar Angket Peminatan
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div class="box box-success">
+        <div class="box box-primary">
           <div class="box-header with-border">
             <h3 class="box-title">Daftar Angket Peminatan Siswa Baru Angkatan {{ $angkatan }}</h3>
             <div>
@@ -45,9 +45,9 @@ Halaman Daftar Angket Peminatan
             </div>
 
             <div class="btn-group pull-right">
-            <a href="{{ url('/angket_peminatan/angkatan_siswa/angket/export_data/'.$angkatan) }}" class="btn btn-sm btn-success"><i class="fa fa-file-excel-o"></i> Export Data</a>
+            <a href="{{ url('/angket_peminatan/angkatan_siswa/angket/export_data/'.$angkatan) }}" class="btn btn-sm btn-primary"><i class="fa fa-file-excel-o"></i> Export Data</a>
             @if($tombol_rekomendasi == 'on' && $status_bobot == 1)
-            <a href="{{ url('/angket_peminatan/angkatan_siswa/angket/hasilkan_rekomendasi/'.$angkatan) }}" class="btn btn-sm btn-success"> Hasilkan Rekomendasi</a>
+            <a href="{{ url('/angket_peminatan/angkatan_siswa/angket/hasilkan_rekomendasi/'.$angkatan) }}" class="btn btn-sm btn-primary"> Hasilkan Rekomendasi</a>
             @else
             <a href="#" class="btn btn-sm btn-default disabled"> Hasilkan Rekomendasi</a>
             @endif
@@ -67,6 +67,8 @@ Halaman Daftar Angket Peminatan
                   <th>Tools</th>
                 </tr>
               </thead>
+
+              
               <tbody>
                 @for($i=0; $i < $baris; $i++)
                 <tr>
@@ -81,6 +83,7 @@ Halaman Daftar Angket Peminatan
                     <div class="btn-group">
                       <a href="{{ url('/angket_peminatan/angkatan_siswa/angket/edit/'.$angket_peminatan[$i][0]) }}" class="btn btn-default" data-toggle="tooltip" title="Edit Angket Siswa"><i class="fa fa-pencil"></i></a>
                     </div>
+
                   </td>
                 </tr>
                 @endfor

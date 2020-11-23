@@ -1526,6 +1526,18 @@ a:focus {
  * Component: Box
  * --------------
  */
+/*edit ->*/
+.box-bg-grey {
+  background-color: #f4f4f4;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
+/*<- edit*/
+
 .box {
   position: relative;
   border-radius: 3px;
@@ -1724,7 +1736,8 @@ a:focus {
   position: relative;
 }
 .box-header.with-border {
-  border-bottom: 1px solid #f4f4f4;
+  /*border-bottom: 1px solid #f4f4f4;*/
+  border-bottom: 1px solid lightgray;
 }
 .collapsed-box .box-header.with-border {
   border-bottom: none;
@@ -1811,9 +1824,10 @@ a:focus {
   border-top-right-radius: 0;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
-  border-top: 1px solid #f4f4f4;
+  /*border-top: 1px solid #f4f4f4;*/
+  border-top: 1px solid lightgray;
   padding: 10px;
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
 }
 .chart-legend {
   margin: 10px 0;
@@ -2013,8 +2027,11 @@ a:focus {
   background: #fff;
   width: 100%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
+  /*border-radius: 2px;*/
   margin-bottom: 15px;
+  /*edit*/
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
 }
 .info-box small {
   font-size: 14px;
@@ -2032,10 +2049,10 @@ a:focus {
   background: #fff;
 }
 .info-box-icon {
-  border-top-left-radius: 2px;
+  border-top-left-radius: 30px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 0px;
   display: block;
   float: left;
   height: 90px;
@@ -2060,7 +2077,7 @@ a:focus {
 .progress-description,
 .info-box-text {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

@@ -48,16 +48,16 @@ Halaman Nilai Perbandingan Berpasangan
           <p>Setelah dilakukan perhitungan menggunakan metode <i>Analytical Hierarchy Process</i>, nilai perbandingan berpasangan yang diinputkan sebelumnya dinyatakan <b>TIDAK KONSISTEN</b>. Hal tersebut dapat mempengaruhi hasil perekomendasian peminatan siswa. Silahkan masukkan kembali nilai perbandingan berpasangan pada matriks di bawah ini!</p>
         </div>
         @endif
-        <div class="box box-success">
+        <div class="box box-primary">
           <div class="box-header with-border">
             <h3 class="box-title">Form. Pengisian Nilai Perbandingan Berpasangan IPS</h3>
-            <button type="button" class="btn btn-default btn-sm pull-right" data-toggle="modal" data-target="#modal-default">
+            <button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#modal-default">
               <i class="fa fa-table"></i> Tabel Nilai Perbandingan Berpasangan
             </button>
           </div><!-- /.box-header -->
 
           <!-- Form modal -->
-          <div class="modal fade" id="modal-default">
+          <div class="modal modal-primary fade" id="modal-default">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">

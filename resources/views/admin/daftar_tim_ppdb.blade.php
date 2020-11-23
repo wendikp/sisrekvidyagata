@@ -7,6 +7,8 @@ Halaman Daftar Pengguna
 @section('style')
 <!-- DataTables -->
 <link rel="stylesheet" href="{{ asset('AdminLTE/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+<!-- bootstrap datepicker -->
+<link rel="stylesheet" href="{{ asset('AdminLTE/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}">
 
 <style type="text/css">
   .example-modal .modal {
@@ -42,21 +44,19 @@ Halaman Daftar Pengguna
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div class="box box-success">
+        <div class="box box-primary">
           <div class="box-header with-border">
             <h3 class="box-title">Tim PPDB</h3>
-            <button type="button" class="btn btn-default btn-sm pull-right" data-toggle="modal" data-target="#modal-default">
+            <button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#modal-default">
               <i class="fa fa-plus"></i> Tambah Tim PPDB
             </button>
           </div><!-- /.box-header -->
 
           <!-- Form modal -->
-          <div class="modal fade" id="modal-default">
+          <div class="modal modal-primary fade" id="modal-default">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title">Silahkan masukkan jumlah anggota dan masa jabatan</h4>
                   </div>
                   <div class="modal-body">
@@ -80,8 +80,8 @@ Halaman Daftar Pengguna
                       </table>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
-                      <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+                      <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Tutup</button>
+                      <button type="submit" value="submit" class="btn btn-outline">Submit</button>
                     </div>
                   </form>
                 </div>
@@ -160,6 +160,8 @@ Halaman Daftar Pengguna
   <!-- DataTables -->
   <script src="{{ asset('AdminLTE/bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
   <script src="{{ asset('AdminLTE/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
+  <!-- bootstrap datepicker -->
+  <script src="{{ asset('AdminLTE/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
   <!-- InputMask -->
   <script src="{{ asset('AdminLTE/plugins/input-mask/jquery.inputmask.js') }}"></script>
   <script src="{{ asset('AdminLTE/plugins/input-mask/jquery.inputmask.date.extensions.js') }}"></script>
@@ -178,7 +180,7 @@ Halaman Daftar Pengguna
         'info'        : true,
         'autoWidth'   : false
       })
-    });
+    })
 
     //Input mask
     $('[data-mask]').inputmask();
@@ -186,6 +188,12 @@ Halaman Daftar Pengguna
     // Tooltip
     $(document).ready(function(){
       $('[data-toggle="tooltip"]').tooltip();   
-    });
+    })
+
+    //Date picker
+    $('#datepicker').datepicker({
+      format: "dd-mm-yyyy",
+      autoclose:true
+    })
   </script>
   @endsection

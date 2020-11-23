@@ -7,6 +7,8 @@ Halaman Daftar Pengguna
 @section('style')
 <!-- DataTables -->
 <link rel="stylesheet" href="{{ asset('AdminLTE/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+<!-- bootstrap datepicker -->
+<link rel="stylesheet" href="{{ asset('AdminLTE/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}">
 @endsection
 
 @section('content')
@@ -26,12 +28,13 @@ Halaman Daftar Pengguna
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div class="box box-success">
+        <div class="box box-primary">
           <div class="box-header with-border">
             <h3 class="box-title">Waka Kurikulum</h3>
-            <a href="{{ url('/daftar_waka_kurikulum/tambah')}}" class="btn btn-default btn-sm pull-right">
+            <button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#modal-tambah"><i class="fa fa-plus"></i> Tambah Waka Kurikulum</button>
+            <!-- <a href="{{ url('/daftar_waka_kurikulum/tambah')}}" class="btn btn-default btn-sm pull-right">
               <i class="fa fa-plus"></i> Tambah Waka Kurikulum
-            </a>
+            </a> -->
           </div><!-- /.box-header -->
           <div class="box-body table-responsive">
             <table id="example1" class="table table-bordered table-striped">
@@ -94,6 +97,102 @@ Halaman Daftar Pengguna
         </div><!-- /.box -->
       </div><!-- /.col -->
     </div><!-- /.row -->
+
+    <!-- Form modal -->
+    <div class="modal modal-primary fade" id="modal-tambah">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Tambah Waka Kurikulum</h4>
+          </div>
+          <form action="{{ url('/insert_admin') }}" role="form" method="POST">
+            <div class="modal-body">
+              @csrf
+              <input type="hidden" name="id_user" value="{{ Auth::user()->id }}">
+              <table class="table table-responsive table-condensed">
+                <tr>
+                  <div class="form-group">
+                    <td style="border: none; width: 110px;">NIP/NIK</td>
+                    <td style="border: none; width: 20px;">:</td>
+                    <td style="border: none;"><input type="text" class="form-control" name="no_induk" style="width: 230px;" required="required"></td>
+                  </div>
+                </tr>
+                <tr>
+                  <div class="form-group">
+                    <td style="border: none;">Nama Lengkap</td>
+                    <td style="border: none;">:</td>
+                    <td style="border: none;"><input type="text" class="form-control" name="nama" style="width: 230px;" required="required"></td>
+                  </div>
+                </tr>
+                <tr>
+                  <div class="form-group">
+                    <td style="border: none;">Periode</td>
+                    <td style="border: none;">:</td>
+                    <td style="border: none;">
+                      <input type="text" class="form-control" name="periode" style="width: 230px;" required="required" data-inputmask='"mask": "9999 - 9999"' data-mask placeholder="Ex: 2010 - 2014">
+                    </td>
+                  </div>
+                </tr>
+                <tr>
+                  <div class="form-group">
+                    <td style="border: none;">Email</td>
+                    <td style="border: none;">:</td>
+                    <td style="border: none;"><input type="email" class="form-control" name="email" style="width: 230px;" required="required"></td>
+                  </div>
+                </tr>
+                <tr>
+                  <div class="form-group">
+                    <td style="border: none;">No. HP</td>
+                    <td style="border: none;">:</td>
+                    <td style="border: none;">
+                      <input type="text" class="form-control" name="no_hp" style="width: 230px;" required="required" data-inputmask='"mask": "9999-9999-9999"' data-mask>
+                    </td>
+                  </div>
+                </tr>
+                <tr>
+                  <div class="form-group">
+                    <td style="border: none;">Tanggal Lahir</td>
+                    <td style="border: none;">:</td>
+                    <td style="border: none;">
+                      <div class="input-group date">
+                        <div class="input-group-addon">
+                          <i class="fa fa-calendar"></i>
+                        </div>
+                        <input type="text" class="form-control" id="datepicker" name="tgl_lahir" style="width: 192px;" required="required">
+                      </div>
+                    </td>
+                  </div>
+                </tr>
+                <tr>
+                  <div class="form-group">
+                    <td style="border: none;">Jenis Kelamin</td>
+                    <td style="border: none;">:</td>
+                    <td style="border: none;">
+                      <select name="jenis_kelamin" class="form-control" style="width: 130px;" required="required">
+                       <option value="L">Laki-laki</option>
+                       <option value="P">Perempuan</option>
+                     </select>
+                   </td>
+                 </div>
+               </tr>
+               <tr>
+                <td style="border: none;">Alamat</td>
+                <td style="border: none;">:</td>
+                <td style="border: none;"><textarea class="form-control " name="alamat" rows="3" cols="80" required="required"></textarea></td>
+              </tr>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Tutup</button>
+            <button type="submit" value="submit" class="btn btn-outline">Submit</button>
+          </div>
+        </form>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
   </section><!-- /.content -->
 </div>
 @endsection
@@ -102,6 +201,12 @@ Halaman Daftar Pengguna
 <!-- DataTables -->
 <script src="{{ asset('AdminLTE/bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('AdminLTE/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
+<!-- bootstrap datepicker -->
+<script src="{{ asset('AdminLTE/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
+<!-- InputMask -->
+<script src="{{ asset('AdminLTE/plugins/input-mask/jquery.inputmask.js') }}"></script>
+<script src="{{ asset('AdminLTE/plugins/input-mask/jquery.inputmask.date.extensions.js') }}"></script>
+<script src="{{ asset('AdminLTE/plugins/input-mask/jquery.inputmask.extensions.js') }}"></script>
 @endsection
 
 @section('page-script')
@@ -120,6 +225,14 @@ Halaman Daftar Pengguna
 
   $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
-  });
+  })
+  //Input mask
+  $('[data-mask]').inputmask()
+
+  //Date picker
+  $('#datepicker').datepicker({
+    format: "dd-mm-yyyy",
+    autoclose:true
+  })
 </script>
 @endsection

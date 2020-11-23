@@ -42,16 +42,16 @@ Halaman Kriteria Peminatan
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div class="box box-success">
+        <div class="box box-primary">
           <div class="box-header with-border">
             <h3 class="box-title">Daftar Kriteria Peminatan</h3>
-            <button type="button" class="btn btn-default btn-sm pull-right" data-toggle="modal" data-target="#modal-default">
+            <button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#modal-default">
               <i class="fa fa-plus"></i> Buat Kriteria Baru
             </button>
           </div><!-- /.box-header -->
 
           <!-- Form modal -->
-          <div class="modal fade" id="modal-default">
+          <div class="modal modal-primary fade" id="modal-default">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -71,8 +71,8 @@ Halaman Kriteria Peminatan
                     </table>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Tutup</button>
-                    <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Tutup</button>
+                    <button type="submit" value="submit" class="btn btn-outline">Submit</button>
                   </div>
                 </form>
               </div>

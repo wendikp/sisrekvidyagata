@@ -24,7 +24,7 @@ Route::get('/')->middleware(['auth', 'role']);
 // ------------------------ ADMIN -----------------------
 // ======================================================
 Route::get('/dashboard-admin', 'PenggunaController@index')->middleware(['auth', 'admin']);
-Route::post('/dashboard-admin/gantiPassword', 'PenggunaController@gantiPasswordAdmin')->middleware(['auth', 'timPPDB']);
+Route::post('/dashboard-admin/gantiPassword', 'PenggunaController@gantiPasswordAdmin')->middleware(['auth', 'admin']);
 // Kelola Admin
 Route::get('/daftar_admin', 'PenggunaController@showAdmin')->middleware(['auth', 'admin']);
 Route::get('/daftar_admin/tambah', 'PenggunaController@createAdmin')->middleware(['auth', 'admin']);

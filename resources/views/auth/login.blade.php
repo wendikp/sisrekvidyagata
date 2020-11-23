@@ -35,76 +35,69 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
 </head>
-<!-- <body class="hold-transition login-page" style="background-image: url({{ url('/image/wp2151419.jpg') }});"> -->
-<body class="hold-transition login-page" style="background-image: url({{ url('/image/graduation-caps-in-air.jpg') }}); width: 100%; height: 100%; position: fixed; background-size: 100%;">
+<body class="hold-transition login-page" style="background-image: url({{ url('/image/IMG_20191127_103105.jpg') }}); width: 100%; height: 100%; position: fixed; background-size: 100%;">
   <div>
     <div class="login-box-tp">
-            <!-- <div class="login-logo">
-                <p style="text-shadow: 0px 0px 5px black; color: white; font-size: 35pt;"><b>SisRek</b> Vidyagata</p>
-              </div> -->
-              <!-- /.login-logo -->
-            <!-- <div class="login-box-body" style="border: 2px solid gray">
-            <p class="login-box-msg">Silahkan login untuk masuk ke sistem</p> -->
-            <img src="{{ url('/image/avatar.png') }}" class="avatar">
-            <h1>SisRek Vidyagata</h1>
-            <br/>
-            <h2>Silahkan login untuk masuk ke sistem</h2>
+      <img src="{{ url('/image/avatar.png') }}" class="avatar">
+      <h1>SisRek Vidyagata</h1>
+      <br/>
+      <h2>Silahkan login untuk masuk ke sistem</h2>
 
-            <form method="POST" action="{{ route('login') }}">
-              @csrf
-              <p>Username</p>
-              <div class="form-group has-feedback">
-                <input id="no_induk" name="no_induk" type="text" class="form-control" placeholder="NIS (Siswa) | NIK/NIP (Staf)" required autofocus>
-                @if ($errors->has('no_induk'))
-                <span class="invalid-feedback" role="alert">
-                  <strong>{{ $errors->first('no_induk') }}</strong>
-                </span>
-                @endif
-                <span class="glyphicon glyphicon-user form-control-feedback"></span>
-              </div>
-              <p>Password</p>
-              <div class="form-group has-feedback">
-                <input id="password" name="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Password" required>
-                @if ($errors->has('password'))
-                <span class="invalid-feedback" role="alert">
-                  <strong>{{ $errors->first('password') }}</strong>
-                </span>
-                @endif
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-              </div>
-              <div class="row">
-                <div class="col-xs-12">
-                  <!-- <button type="submit" class="btn btn-primary btn-flat center-block" style="width: 30%">Login</button> -->
-                  <input type="submit" name="submit" value="Login">
-                </div>
-                <!-- /.col -->
-              </div>
-              <div class="row">
-                <div class="col-xs-12">
-                  <!-- <a href="https://www.instagram.com/wendi_kp/" class="pull-right" style="margin-top: 20px; margin-bottom: -15px; font-size: 8pt">Developed by Wendi K.P.</a> -->
-                </div>
-              </div>
-            </form>
-            <!-- </div> -->
-            <!-- /.login-box-body -->
-          </div>
-          <!-- /.login-box -->
+      <form method="POST" action="{{ route('login') }}">
+        @csrf
+        <p>Username</p>
+        <div class="form-group has-feedback">
+          <input id="no_induk" name="no_induk" type="text" class="form-control" placeholder="NIS (Siswa) | NIK/NIP (Staf)" required autofocus>
+          @if ($errors->has('no_induk'))
+          <span class="invalid-feedback" role="alert">
+            <strong>{{ $errors->first('no_induk') }}</strong>
+          </span>
+          @endif
+          <span class="fa fa-user form-control-feedback"></span>
         </div>
+        <p>Password</p>
+        <div class="form-group has-feedback">
+          <input id="password" name="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"placeholder="Password" required>
+          @if ($errors->has('password'))
+          <span class="invalid-feedback" role="alert">
+            <strong>{{ $errors->first('password') }}</strong>
+          </span>
+          @endif
+          <span class="fa fa-lock form-control-feedback"></span>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <!-- <button type="submit" class="btn btn-primary btn-flat center-block" style="width: 30%">Login</button> -->
+            <input type="submit" name="submit" value="Login">
+          </div>
+          <!-- /.col -->
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <!-- <a href="https://www.instagram.com/wendi_kp/" class="pull-right" style="margin-top: 20px; margin-bottom: -15px; font-size: 8pt">Developed by Wendi K.P.</a> -->
+          </div>
+        </div>
+      </form>
+      <!-- </div> -->
+      <!-- /.login-box-body -->
+    </div>
+    <!-- /.login-box -->
+  </div>
 
-        <!-- jQuery 3 -->
-        <script src="{{ asset('AdminLTE/bower_components/jquery/dist/jquery.min.js') }}"></script>
-        <!-- Bootstrap 3.3.7 -->
-        <script src="{{ asset('AdminLTE/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-        <!-- iCheck -->
-        <script src="{{ asset('AdminLTE/plugins/iCheck/icheck.min.js') }}"></script>
-        <script>
-          $(function () {
-            $('input').iCheck({
-              checkboxClass: 'icheckbox_square-blue',
-              radioClass: 'iradio_square-blue',
+  <!-- jQuery 3 -->
+  <script src="{{ asset('AdminLTE/bower_components/jquery/dist/jquery.min.js') }}"></script>
+  <!-- Bootstrap 3.3.7 -->
+  <script src="{{ asset('AdminLTE/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+  <!-- iCheck -->
+  <script src="{{ asset('AdminLTE/plugins/iCheck/icheck.min.js') }}"></script>
+  <script>
+    $(function () {
+      $('input').iCheck({
+        checkboxClass: 'icheckbox_square-blue',
+        radioClass: 'iradio_square-blue',
       increaseArea: '20%' // optional
     });
-          });
-        </script>
-      </body>
-      </html>
+    });
+  </script>
+</body>
+</html>

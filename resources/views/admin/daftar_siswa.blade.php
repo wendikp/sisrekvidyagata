@@ -43,10 +43,10 @@ Halaman Daftar Pengguna
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div class="box box-success">
+        <div class="box box-primary">
           <div class="box-header with-border">
             <h3 class="box-title">Daftar Siswa Angkatan {{ $angkatan }}/{{ $angkatan+1 }}</h3>
-            <button type="button" class="btn btn-default btn-sm pull-right" data-toggle="modal" data-target="#modal-default">
+            <button type="button" class="btn btn-primary btn-sm pull-right" data-toggle="modal" data-target="#modal-default">
               <i class="fa fa-plus"></i> Tambah Siswa
             </button>
           </div><!-- /.box-header -->

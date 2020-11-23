@@ -16,7 +16,7 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="{{ asset('AdminLTE/bower_components/Ionicons/css/ionicons.min.css') }}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/AdminLTE.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/AdminLTE.css') }}">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
   folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="{{ asset('AdminLTE/dist/css/skins/_all-skins.min.css') }}">
@@ -61,28 +61,14 @@
           <ul class="nav navbar-nav">
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                {{ Auth::user()->name }}<span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" style="width: 50px">
-                <!-- Menu Body -->
-                <li class="user-body">
-                  <div class="row">
-                    <!-- <div class="col-xs-4 text-center"> -->
-                    <div class="text-center">
-                      <a href="{{ route('logout') }}" 
-                      onclick="event.preventDefault();
-                      document.getElementById('logout-form').submit();">
-                      {{ __('Logout') }}
-                    </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                      @csrf
-                    </form>
-                  </div>
-                </div>
-                <!-- /.row -->
-              </li>
-            </ul>
+              <a href="{{ route('logout') }}" 
+              onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">
+              {{ __('Logout') }}
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+            </form>
           </li>
         </ul>
       </div>
@@ -107,9 +93,9 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MENU UTAMA</li>
-        <li><a href="{{ url('/dashboard-waka-kurikulum') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li><a href="{{ url('/tahun_ajaran') }}"><i class="fa fa-book"></i> Daftar Rombel</a></li>
-        <li><a href="{{ url('/daftar_rombel_deleted') }}"><i class="fa fa-trash"></i> Trash</a></li>
+        <li><a href="{{ url('/dashboard-waka-kurikulum') }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        <li><a href="{{ url('/tahun_ajaran') }}"><i class="fa fa-book"></i> <span>Daftar Rombel</span></a></li>
+        <li><a href="{{ url('/daftar_rombel_deleted') }}"><i class="fa fa-trash"></i> <span>Trash</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
