@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Nov 2019 pada 09.59
+-- Waktu pembuatan: 24 Feb 2021 pada 04.20
 -- Versi server: 10.1.36-MariaDB
 -- Versi PHP: 7.2.11
 
@@ -463,7 +463,27 @@ INSERT INTO `nilai_peminatan` (`id`, `nilai_ipa`, `nilai_ips`, `nilai_bahasa`, `
 (137, 0.702945, 0.697751, 0.706921, 92, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
 (138, 0.692686, 0.6834, 0.702915, 93, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
 (139, 0.714938, 0.699523, 0.723139, 94, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(140, 0.714938, 0.699523, 0.723139, 95, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL);
+(140, 0.714938, 0.699523, 0.723139, 95, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
+(141, 0.691031, 0.67754, 0.701338, 76, '2021-01-19 15:34:08', '2021-01-19 15:34:08', NULL),
+(142, 0.739382, 0.723352, 0.750218, 77, '2021-01-19 15:34:08', '2021-01-19 15:34:08', NULL),
+(143, 0.849018, 0.827927, 0.858901, 78, '2021-01-19 15:34:08', '2021-01-19 15:34:08', NULL),
+(144, 0.749651, 0.769072, 0.759173, 79, '2021-01-19 15:34:08', '2021-01-19 15:34:08', NULL),
+(145, 0.776909, 0.752546, 0.787163, 80, '2021-01-19 15:34:08', '2021-01-19 15:34:08', NULL),
+(146, 0.836503, 0.821101, 0.833394, 81, '2021-01-19 15:34:08', '2021-01-19 15:34:08', NULL),
+(147, 0.878661, 0.864089, 0.890807, 82, '2021-01-19 15:34:08', '2021-01-19 15:34:08', NULL),
+(148, 0.757506, 0.743412, 0.766622, 83, '2021-01-19 15:34:08', '2021-01-19 15:34:08', NULL),
+(149, 0.817425, 0.806793, 0.813559, 84, '2021-01-19 15:34:08', '2021-01-19 15:34:08', NULL),
+(150, 0.734996, 0.725509, 0.744033, 85, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(151, 0.664263, 0.646528, 0.674492, 86, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(152, 0.702676, 0.680833, 0.700019, 87, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(153, 0.527482, 0.550518, 0.536412, 88, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(154, 0.68054, 0.669326, 0.68693, 89, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(155, 0.770154, 0.735191, 0.775894, 90, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(156, 0.765814, 0.740165, 0.769362, 91, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(157, 0.702945, 0.697751, 0.706921, 92, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(158, 0.692686, 0.6834, 0.702915, 93, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(159, 0.714938, 0.699523, 0.723139, 94, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(160, 0.714938, 0.699523, 0.723139, 95, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL);
 
 -- --------------------------------------------------------
 
@@ -579,46 +599,26 @@ INSERT INTO `rekomendasi_peminatan` (`id`, `rekomendasi_1`, `rekomendasi_2`, `re
 (98, 'Bahasa dan Budaya', 'MIPA', 'IPS', 93, '2019-07-13 14:54:52', '2019-07-13 14:54:52', NULL),
 (99, 'Bahasa dan Budaya', 'MIPA', 'IPS', 94, '2019-07-13 14:54:52', '2019-07-13 14:54:52', NULL),
 (100, 'Bahasa dan Budaya', 'MIPA', 'IPS', 95, '2019-07-13 14:54:52', '2019-07-13 14:54:52', NULL),
-(101, 'Bahasa dan Budaya', 'MIPA', 'IPS', 76, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(102, 'Bahasa dan Budaya', 'MIPA', 'IPS', 77, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(103, 'Bahasa dan Budaya', 'MIPA', 'IPS', 78, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(104, 'IPS', 'Bahasa dan Budaya', 'MIPA', 79, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(105, 'Bahasa dan Budaya', 'MIPA', 'IPS', 80, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(106, 'MIPA', 'Bahasa dan Budaya', 'IPS', 81, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(107, 'Bahasa dan Budaya', 'MIPA', 'IPS', 82, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(108, 'Bahasa dan Budaya', 'MIPA', 'IPS', 83, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(109, 'MIPA', 'Bahasa dan Budaya', 'IPS', 84, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(110, 'Bahasa dan Budaya', 'MIPA', 'IPS', 85, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(111, 'Bahasa dan Budaya', 'MIPA', 'IPS', 86, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(112, 'MIPA', 'Bahasa dan Budaya', 'IPS', 87, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(113, 'IPS', 'Bahasa dan Budaya', 'MIPA', 88, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(114, 'Bahasa dan Budaya', 'MIPA', 'IPS', 89, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(115, 'Bahasa dan Budaya', 'MIPA', 'IPS', 90, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(116, 'Bahasa dan Budaya', 'MIPA', 'IPS', 91, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(117, 'Bahasa dan Budaya', 'MIPA', 'IPS', 92, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(118, 'Bahasa dan Budaya', 'MIPA', 'IPS', 93, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(119, 'Bahasa dan Budaya', 'MIPA', 'IPS', 94, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(120, 'Bahasa dan Budaya', 'MIPA', 'IPS', 95, '2019-07-25 19:25:00', '2019-07-25 19:25:00', NULL),
-(121, 'Bahasa dan Budaya', 'MIPA', 'IPS', 76, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(122, 'Bahasa dan Budaya', 'MIPA', 'IPS', 77, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(123, 'Bahasa dan Budaya', 'MIPA', 'IPS', 78, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(124, 'IPS', 'Bahasa dan Budaya', 'MIPA', 79, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(125, 'Bahasa dan Budaya', 'MIPA', 'IPS', 80, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(126, 'MIPA', 'Bahasa dan Budaya', 'IPS', 81, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(127, 'Bahasa dan Budaya', 'MIPA', 'IPS', 82, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(128, 'Bahasa dan Budaya', 'MIPA', 'IPS', 83, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(129, 'MIPA', 'Bahasa dan Budaya', 'IPS', 84, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(130, 'Bahasa dan Budaya', 'MIPA', 'IPS', 85, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(131, 'Bahasa dan Budaya', 'MIPA', 'IPS', 86, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(132, 'MIPA', 'Bahasa dan Budaya', 'IPS', 87, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(133, 'IPS', 'Bahasa dan Budaya', 'MIPA', 88, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(134, 'Bahasa dan Budaya', 'MIPA', 'IPS', 89, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(135, 'Bahasa dan Budaya', 'MIPA', 'IPS', 90, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(136, 'Bahasa dan Budaya', 'MIPA', 'IPS', 91, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(137, 'Bahasa dan Budaya', 'MIPA', 'IPS', 92, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(138, 'Bahasa dan Budaya', 'MIPA', 'IPS', 93, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(139, 'Bahasa dan Budaya', 'MIPA', 'IPS', 94, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL),
-(140, 'Bahasa dan Budaya', 'MIPA', 'IPS', 95, '2019-07-25 19:27:19', '2019-07-25 19:27:19', NULL);
+(101, 'Bahasa dan Budaya', 'MIPA', 'IPS', 76, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(102, 'Bahasa dan Budaya', 'MIPA', 'IPS', 77, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(103, 'Bahasa dan Budaya', 'MIPA', 'IPS', 78, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(104, 'IPS', 'Bahasa dan Budaya', 'MIPA', 79, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(105, 'Bahasa dan Budaya', 'MIPA', 'IPS', 80, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(106, 'MIPA', 'Bahasa dan Budaya', 'IPS', 81, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(107, 'Bahasa dan Budaya', 'MIPA', 'IPS', 82, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(108, 'Bahasa dan Budaya', 'MIPA', 'IPS', 83, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(109, 'MIPA', 'Bahasa dan Budaya', 'IPS', 84, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(110, 'Bahasa dan Budaya', 'MIPA', 'IPS', 85, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(111, 'Bahasa dan Budaya', 'MIPA', 'IPS', 86, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(112, 'MIPA', 'Bahasa dan Budaya', 'IPS', 87, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(113, 'IPS', 'Bahasa dan Budaya', 'MIPA', 88, '2021-01-19 15:34:09', '2021-01-19 15:34:09', NULL),
+(114, 'Bahasa dan Budaya', 'MIPA', 'IPS', 89, '2021-01-19 15:34:10', '2021-01-19 15:34:10', NULL),
+(115, 'Bahasa dan Budaya', 'MIPA', 'IPS', 90, '2021-01-19 15:34:10', '2021-01-19 15:34:10', NULL),
+(116, 'Bahasa dan Budaya', 'MIPA', 'IPS', 91, '2021-01-19 15:34:10', '2021-01-19 15:34:10', NULL),
+(117, 'Bahasa dan Budaya', 'MIPA', 'IPS', 92, '2021-01-19 15:34:10', '2021-01-19 15:34:10', NULL),
+(118, 'Bahasa dan Budaya', 'MIPA', 'IPS', 93, '2021-01-19 15:34:10', '2021-01-19 15:34:10', NULL),
+(119, 'Bahasa dan Budaya', 'MIPA', 'IPS', 94, '2021-01-19 15:34:10', '2021-01-19 15:34:10', NULL),
+(120, 'Bahasa dan Budaya', 'MIPA', 'IPS', 95, '2021-01-19 15:34:10', '2021-01-19 15:34:10', NULL);
 
 -- --------------------------------------------------------
 
@@ -653,7 +653,7 @@ INSERT INTO `rombel` (`id`, `nama_rombel`, `wali_kelas`, `jumlah_siswa`, `kuota_
 (29, 'IPS 3 6118', 'Yatmiarsih, S.Pd', 0, 30, 'IPS', '2018', '2019-05-02 02:55:25', '2019-05-02 02:55:25', NULL),
 (30, 'IPS 4 6118', 'Ichwan Helamy, S.S', 0, 30, 'IPS', '2018', '2019-05-02 02:55:25', '2019-05-02 02:55:25', NULL),
 (31, 'IPS 5 6118', 'Dra. Listyaningsih', 0, 30, 'IPS', '2018', '2019-05-02 02:55:25', '2019-05-02 02:55:25', NULL),
-(32, 'Bahasa dan Budaya 6118', 'Virginia Rooselyne P., S.Pd', 0, 30, 'Bahasa dan Budaya', '2018', '2019-05-02 02:55:25', '2019-07-13 14:52:39', NULL);
+(32, 'Bahasa dan Budaya 6118', 'Virginia Rooselyne P., S.Pd', 1, 30, 'Bahasa dan Budaya', '2018', '2019-05-02 02:55:25', '2021-01-19 15:37:17', NULL);
 
 -- --------------------------------------------------------
 
@@ -710,9 +710,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `no_induk`, `id_rombel`, `name`, `password`, `temp_password`, `email`, `no_telepon`, `alamat`, `jenis_kelamin`, `tgl_lahir`, `angkatan`, `periode`, `asal_sekolah`, `role`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(71, 'admin', NULL, 'Administrator', '$2y$10$d0pzkrdkG0w656CpCcO/n.0QCzs8xYGjVB0V/UsbMA/XPslCAa3aO', NULL, 'admin@gmail.com', '0214-5689-8790', 'Jl. Soekarno Hatta, gg 19, no.34, Klojen, Jawa Timur', 'L', '1994-07-12', NULL, NULL, NULL, 'Admin', 'KRtbNa8TD3oN5ZOMyOjW5gSdVpyv9c3pTedkqWBR2FK1WjnKwGdrUELJAXoN', '2019-03-12 23:46:31', '2019-04-29 18:30:04', NULL),
-(72, 'timppdb', NULL, 'Tim PPDB', '$2y$10$8y27q1lMHYkBfDGrIazoHOWsi3hJ1txyfIh1585x9RuXaJ5xTFUQ6', 'JY1kJHHe', 'timppdb@gmail.com', '0821-3874-5895', 'Jl. Soekarno Hatta', 'L', '2019-03-05', NULL, '2019 - 2020', NULL, 'Tim PPDB', 'WAVvwV6gTBAK4n9ez9LQIyQY31SlDDrpfIFLYeM4iRjweEGwIU8ZkyXRTvJS', '2019-03-12 23:58:48', '2019-03-12 23:58:48', NULL),
-(76, '1234567801', NULL, 'Siswa 1', '$2y$10$3peqYAgrCZfWsLln3uUEzuE4Uum/0LnJUvVBa9ZhX74.gz8emS9sq', '9ushWFaL', 'siswa@gmail.com', '0865-1234-4321', 'Jl. Soekarno Hatta, no 4', 'L', '2000-05-16', '2018', NULL, 'SMPN Malang', 'Siswa', 'aR3nP7Dzrh20yx38jW66Tn78ki0TSb6yuaVs4Bb1L9k4vqcBjR56vWfa7Sbx', '2019-05-02 02:37:48', '2019-05-02 04:25:39', NULL),
+(71, 'admin', NULL, 'Administrator', '$2y$10$d0pzkrdkG0w656CpCcO/n.0QCzs8xYGjVB0V/UsbMA/XPslCAa3aO', NULL, 'admin@gmail.com', '0214-5689-8790', 'Jl. Soekarno Hatta, gg 19, no.34, Klojen, Jawa Timur', 'L', '1994-07-12', NULL, NULL, NULL, 'Admin', 'T37lqgnxndH43g9baZws5xhiVWkbuKzEuqqFPdTRfLUetr4ohir5ibQnGJ4d', '2019-03-12 23:46:31', '2019-11-25 20:33:19', '2019-11-25 20:33:19'),
+(72, 'timppdb', NULL, 'Tim PPDB', '$2y$10$jNvk9jDiJuY7vOgqKfgLLuQiw57XnYqo9rIZB3fdYPTfG63WEmWK6', 'JY1kJHHe', 'timppdb@gmail.com', '0821-3874-5895', 'Jl. Soekarno Hatta', 'L', '2019-03-05', NULL, '2019 - 2020', NULL, 'Tim PPDB', 'eF18ZpWo0K1xRnA2MYZff3CvvIGtS3XvPapEUHlrdWqaNXnCUqfrUqNzyqk1', '2019-03-12 23:58:48', '2019-11-26 23:17:50', NULL),
+(76, '1234567801', 32, 'Siswa 1', '$2y$10$3peqYAgrCZfWsLln3uUEzuE4Uum/0LnJUvVBa9ZhX74.gz8emS9sq', '9ushWFaL', 'siswa@gmail.com', '0865-1234-4321', 'Jl. Soekarno Hatta, no 4', 'L', '2000-05-16', '2018', NULL, 'SMPN Malang', 'Siswa', 'omU5xiiTLJRA5C304cbG4zHFtGlQ6duZCOJGn0eNUrWKIajIBXaJqhxRnISl', '2019-05-02 02:37:48', '2021-01-19 15:37:17', NULL),
 (77, '1234567802', NULL, 'Siswa 2', '$2y$10$4HxXEXTtARKEDCkOkuwQUuq84F5lupX8MfgwSAGYYVH8lMhllcW26', '5IJFmkMZ', 'siswa@gmail.com', '0865-1234-4321', NULL, 'L', NULL, '2018', NULL, NULL, 'Siswa', 'ZYnELdXEXLYcQx0t6k1Dt1GdjMstk5UmBagmVjzkdAv012E7zHf2i2EMBoST', '2019-05-02 02:37:48', '2019-05-02 02:37:48', NULL),
 (78, '1234567803', NULL, 'Siswa 3', '$2y$10$O30fJs7Y7CwwM2ObGHTIKO7oZKTgOaonsvasqdVOunJngIerZ7ftq', 'SlZ24T7z', 'siswa@gmail.com', '0865-1234-4321', NULL, 'L', NULL, '2018', NULL, NULL, 'Siswa', '0lVSgvYxAWVmL8fc6JWTX5ubRjhngzB4BIlH8DsV50NSKeHRxJRGCPViAnfp', '2019-05-02 02:37:48', '2019-07-13 14:52:36', NULL),
 (79, '1234567804', NULL, 'Siswa 4', '$2y$10$A0gHENgm6gRMakD/RvJd8unk.aGsL3KYgc7uE4y22fdPRKUt/fhqW', 'wtFITAmW', 'siswa@gmail.com', '0865-1234-4321', NULL, 'L', NULL, '2018', NULL, NULL, 'Siswa', '62zjWGFKCTHSx9qRob3pfov7SXCCcwREWq5CBnHuafQTHIWWxJ2CB9zF96qH', '2019-05-02 02:37:48', '2019-05-02 02:37:48', NULL),
@@ -732,7 +732,9 @@ INSERT INTO `users` (`id`, `no_induk`, `id_rombel`, `name`, `password`, `temp_pa
 (93, '1234567818', NULL, 'Siswa 18', '$2y$10$riiKQhwXlNfjryyylrseoeC7f.SRyacG73xkI4FuAGkLPbruaEWKS', '41zZCGlf', 'siswa@gmail.com', '0865-1234-4321', NULL, 'L', NULL, '2018', NULL, NULL, 'Siswa', 'wnN188SjCw9mS444ZJdmEsFaijb61ybm6NpuHWKbPhu9Xvn5oYPxUL6dNgBV', '2019-05-02 02:37:51', '2019-05-02 02:37:51', NULL),
 (94, '1234567819', NULL, 'Siswa 19', '$2y$10$2OAZ7uy4g9LJ6emls3Q7ReJ.fKWPOYe.TM4F2ga1xuCMio1nfKwh2', '4IppRDh7', 'siswa@gmail.com', '0865-1234-4321', NULL, 'L', NULL, '2018', NULL, NULL, 'Siswa', '7vEyqw8gCLPVILk4isa5o0WqmoLcgyIP7eMHw03UGFet78OwiGbPFO9Fb6DP', '2019-05-02 02:37:51', '2019-05-02 02:37:51', NULL),
 (95, '1234567820', NULL, 'Siswa 20', '$2y$10$5JFQGN8OAFju5ecdxCHJfu6Mf3uydaUdsQZgk4EjrE3PUrTUgCGa2', '54vkHFCS', 'siswa@gmail.com', '0865-1234-4321', NULL, 'L', NULL, '2018', NULL, NULL, 'Siswa', '6dknOcsnjRSACoFUX6007TVQIDxnGexSb20hW1vb3VWnfLi7418v7eKtYoRN', '2019-05-02 02:37:51', '2019-05-02 02:37:51', NULL),
-(96, 'wakakurikulum', NULL, 'Waka Kurikulum', '$2y$10$hlpuY9XSNMPmiTZY178RqOhWDxwJAyySZMDGq2AktlZ/P.tyNqFwm', 'mkasjZIh', 'wakakurikulum@mail.com', '0852-7865-3940', 'jl. soekarno hatta no 18', 'L', '2019-07-17', NULL, '2019 - 2020', NULL, 'Waka Kurikulum', '0mDRiHsi22kRLR5G9mo773IvqGi4lEmKijvhGBjfmG2TcVM0jw83SMEqH0TO', '2019-07-13 09:18:38', '2019-07-13 09:18:38', NULL);
+(96, 'wakakurikulum', NULL, 'Waka Kurikulum', '$2y$10$oonlbFkWBfPeNm9mnXhLYujbe2m3OCM50O/3D6kMVBXYivFkUjKXe', 'mkasjZIh', 'wakakurikulum@mail.com', '0852-7865-3940', 'jl. soekarno hatta no 18', 'L', '2019-07-17', NULL, '2019 - 2020', NULL, 'Waka Kurikulum', 'aRe3pdM4ADm3UEQRLjjZiey60LQKQFOGkcoFalvqK8ZB5pzGEPqcbEdEJgu8', '2019-07-13 09:18:38', '2019-11-25 21:27:36', NULL),
+(97, 'admin2', NULL, 'Administrator', '$2y$10$SKLK0XMu8/W9znP8ShqVi.OfQInGflWEOdo4pqeRMO9y0CYnDiY2i', 'password', 'admin@gmail.com', '24234', 'ldsjalfjsd', 'L', '2019-07-18', NULL, '2019 - 2020', NULL, 'Admin', 'bgelJRKjpns2zCQWfd8Jodr5H9Sc7D3JoKA7We0ErLFuR3rBFI6IUvtnt8DE', '2019-11-11 17:00:00', '2019-11-26 23:13:48', NULL),
+(98, 'admin3', NULL, 'Anonymous', '$2y$10$dTfmK.k90b8d3k8aDML2xevVQ5UcoesyNxLIAc7KMRrqouFSYLVpS', NULL, 'admin@admin.com', '0831-3453-4534', 'Jl. Alamat, No. 36', 'L', '1995-07-20', NULL, NULL, NULL, 'Admin', NULL, '2019-11-26 04:52:30', '2019-11-26 04:52:30', NULL);
 
 --
 -- Indexes for dumped tables
@@ -858,7 +860,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `nilai_peminatan`
 --
 ALTER TABLE `nilai_peminatan`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
 
 --
 -- AUTO_INCREMENT untuk tabel `pengumuman`
@@ -882,7 +884,7 @@ ALTER TABLE `record_kriteria_peminatan`
 -- AUTO_INCREMENT untuk tabel `rekomendasi_peminatan`
 --
 ALTER TABLE `rekomendasi_peminatan`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
 
 --
 -- AUTO_INCREMENT untuk tabel `rombel`
@@ -900,7 +902,7 @@ ALTER TABLE `soal_psikotest`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
